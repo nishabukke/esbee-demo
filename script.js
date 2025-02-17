@@ -1,3 +1,41 @@
+
+// counters
+
+var counted = 0;
+$(window).scroll(function() {
+  var count = $('#counter');
+  if (count.length) {
+    var oTop = count.offset().top - window.innerHeight;
+    if (counted == 0 && $(window).scrollTop() > oTop) {
+      $('.counter').each(function() {
+        var $this = $(this),
+          countTo = $this.attr('data-count');
+        var isProject = $this.closest('.box').find('p').text().trim() === 'Projects';
+        
+        $({
+          countNum: $this.text()
+        }).animate({
+            countNum: countTo
+          },
+          {
+            duration: 2000,
+            easing: 'swing',
+            step: function() {
+              $this.text(Math.floor(this.countNum) + (isProject ? '' : '%'));
+            },
+            complete: function() {
+              $this.text(this.countNum + (isProject ? '' : '%'));
+            }
+          }
+        );
+      });
+      counted = 1;
+    }
+  }
+});
+
+
+
 // sticky header
 
 $(window).on("scroll touchmove", function() {
