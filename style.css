@@ -284,9 +284,9 @@ ul{
 }
 
 .right-about hr{
-    color: #D3DCE0;
+    color: #5a5a67;
     margin: 0;
-    width: 80%;
+    width: 100%;
 }
 
 .right-about h5 span{
@@ -516,6 +516,10 @@ ul{
     width: 100%;
 }
 
+.right-work-process p{
+    color: #9ba2ad;
+}
+
 /* work process css end */
 
 /* custom order css start */
@@ -692,6 +696,447 @@ ul{
 
 .lower-footer p{
     color: #9ba2ad;
+    text-align: center;
 }
 
 /* footer css end */
+
+
+
+/********** MOBILE HEADER ************/
+
+
+.mobile-header{
+    display: none;
+}
+
+.mobile-menu-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.mobile-menu-container .logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mobile-menu-container .logo p{
+    line-height: 1;
+    display: none;
+}
+
+/* mobile menu css */
+
+.canva_expander {
+    cursor: pointer;
+    display: block;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+}
+
+.canva_expander span {
+    height: 2px;
+    width: 35px;
+    display: block;
+    background: #fff;
+    cursor: pointer;
+    list-style: none;
+    margin: 5px 0;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    margin-left: auto;
+}
+
+.canva_expander span.dot2 {
+    width: 27px;
+}
+
+.canva_expander span.dot4 {
+    width: 22px;
+}
+
+
+.hamburger {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    /* line-height: 20px; */
+    padding: 5px;
+    /* border-radius: 5px; */
+    color: #fff;
+    border: 0;
+    font-size: 30px;
+    outline: none;
+    z-index: 1111;
+    font-weight: bold;
+    background: none;
+}
+
+.cross{
+  background:none;
+  position:absolute;
+  top:5px;
+  right:15px;
+  padding:7px 15px 0px 15px;
+  color:#fff;
+  border:0;
+  font-size:3em;
+  line-height:65px;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:9999;
+}
+.menu{z-index:1111; font-weight:bold; font-size:16px; width:100%; background-color: #090A1A;  position:absolute; text-align:center; font-size:12px; top: 0; left: 0;min-height: 100%;}
+.menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none; padding-top: 80px;}
+.menu li {display: block;   padding:15px 0 15px 0;  font-weight: 500;}
+.menu li:hover{display: block;    background-color: #090A1A;}
+.menu ul li a { text-decoration:none;  margin: 0px; color:#fff;font-size: 14px;}
+.menu ul li a:hover {  color: #fff; text-decoration:none;}
+.menu a{text-decoration:none; color:#fff;}
+
+.nav__sub li{
+    padding: 10px 0px !important;
+}
+
+.fa-chevron-right{
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.glyphicon-home{
+  color: #090A1A; 
+  font-size:1.5em; 
+  margin-top:5px; 
+  margin:0 auto;
+}
+
+
+.nav__item , .nav__item {
+	margin-top: 10px;
+}
+
+.menu ul .nav__link {
+	font-weight: 600;
+	color: #fff;
+    /* font-family: 'myregularfont'; */
+	text-decoration: none;
+}
+
+.menu ul .nav__sub {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+    height: 100vh;
+	background-color: #090A1A;
+    color: #fff;
+	opacity: 0;
+	display: none;
+	transition: all 0.35s ease-in-out;
+	transform: translateX(100%);
+}
+
+.menu ul .nav__sub.is-active {
+  opacity: 1;
+  display: block;
+  transform: translateX(0%);
+}
+
+.menu ul .nav__sub {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 15px;
+	list-style-type: none;
+}
+
+.contact-btn-mobile{
+    border-radius: 50px;
+    display: flex;
+    margin: 0 auto;
+    width: max-content;
+    border: 1px solid #181d4e;
+    padding: 10px 20px !important;
+    margin-top: 10px;
+}
+
+.hamburger, .cross, .menu{
+  display: none;
+}
+
+.mobile-menu-container .logo img{
+    width: 60%;
+}
+
+@media screen and (max-width:450px) {
+    .mobile-header{
+        display: block;
+    }
+
+    .header-inner{
+        display: none;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .section_lg{
+        padding: 50px 30px;
+    }
+
+    .common-btn {
+        padding: 12px 40px;
+    }
+
+    .small-heading{
+        font-size: 14px;
+    }
+
+    .common-heading{
+        font-size: 30px;
+    }
+
+    .about-inner, .services-inner, .home-banner-content-inner, .blog-inner, .custom-order-inner, .footer-inner, .right-service, .industry-section{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .about-inner, .services-inner, .work-process-inner, .custom-order-inner, .footer-inner{
+        gap: 30px;
+    }
+
+    .work-process-inner{
+        flex-direction: column;
+    }
+
+    .home-banner-content-inner h1 {
+        font-size: 26px;
+    }
+
+    .home-banner-content {
+        padding: 45px 0px;
+    }
+
+    .client-section{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .about-img{
+        width: 100%;
+        height: auto;
+    }
+
+    .left-about h2{
+        padding: 35px 25px;
+        right: -5%;
+    }
+
+    .right-about{
+        padding-left: 0;
+        padding-right: 0;
+        gap: 15px;
+    }
+
+    .left-service, .testimonial-heading,
+    .right-work-process, .left-custom-order{
+        gap: 15px;
+    }
+
+    .testimonial-heading{
+        margin-bottom: 20px;
+    }
+
+    .client-section img , .left-work-process img{
+        width: 100%;
+    }
+
+    .service-item-desc {
+        margin-top: 30px;
+    }
+
+    .testimonial-item p {
+        font-size: 14px;
+    }
+
+    .swiper-slide .testimonial-item{
+        padding: 0;
+    }
+
+    .testimonial-section .swiper-button-next, .testimonial-section .swiper-button-prev{
+        display: none;
+    }
+
+    .right-work-process img {
+        margin-top: 25px;
+    }
+
+    .left-custom-order .mail-link {
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .left-custom-order .mail-link span {
+        padding: 10px;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+
+    .right-custom-order{
+        gap: 25px;
+    }
+
+    .progress-div h5{
+        font-size: 16px;
+    }
+
+    .blog-inner {
+        margin-top: 25px;
+    }
+
+    .blog-info {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .footer-item{
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .mobile-header{
+        display: block;
+    }
+
+    .mobile-menu-container .logo img{
+        width: 50%;
+    }
+
+    .header-inner{
+        display: none;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .section_lg{
+        padding: 50px 30px;
+    }
+
+    .common-btn {
+        padding: 12px 40px;
+    }
+
+    .small-heading{
+        font-size: 14px;
+    }
+
+    .common-heading{
+        font-size: 30px;
+    }
+
+    .services-inner, .home-banner-content-inner, .custom-order-inner{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .about-inner, .services-inner, .work-process-inner, .custom-order-inner{
+        gap: 30px;
+    }
+
+    .home-banner-content-inner h1 {
+        font-size: 26px;
+    }
+
+    .home-banner-content {
+        padding: 45px 0px;
+    }
+
+    .client-section{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .about-img{
+        width: 100%;
+        height: 350px;
+    }
+
+    .left-about h2{
+        padding: 35px 25px;
+        right: -5%;
+    }
+
+    .right-about{
+        gap: 15px;
+    }
+
+    .left-service, .testimonial-heading,
+    .right-work-process, .left-custom-order{
+        gap: 15px;
+    }
+
+    .testimonial-heading{
+        margin-bottom: 20px;
+    }
+
+    .client-section img , .left-work-process img{
+        width: 100%;
+    }
+
+    .service-item-desc {
+        margin-top: 30px;
+    }
+
+    .testimonial-item p {
+        font-size: 14px;
+    }
+
+    .swiper-slide .testimonial-item{
+        padding: 0;
+    }
+
+    .testimonial-section .swiper-button-next, .testimonial-section .swiper-button-prev{
+        display: none;
+    }
+
+    .right-work-process img {
+        margin-top: 25px;
+    }
+
+    .left-custom-order .mail-link {
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .left-custom-order .mail-link span {
+        padding: 10px;
+        font-size: 16px;
+        margin-right: 10px;
+    }
+
+    .right-custom-order{
+        gap: 25px;
+    }
+
+    .progress-div h5{
+        font-size: 16px;
+    }
+
+    .blog-inner {
+        margin-top: 25px;
+    }
+
+    .blog-info {
+        padding: 20px;
+        gap: 15px;
+    }
+
+}
